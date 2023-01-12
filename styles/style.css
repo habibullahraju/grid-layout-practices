@@ -1,0 +1,52 @@
+.header{
+    grid-area: h;
+}
+.navbar{
+    grid-area: n;
+}
+.main{
+    grid-area: m;
+}
+.aside{
+    grid-area: a;
+}
+.ad{
+    grid-area: ad;
+}
+.footer{
+    grid-area: f;
+}
+.header, .navbar, .main, .aside, .ad, .footer{
+    background-color: brown;
+    
+}
+body{
+    display: grid;
+    gap:  20px;
+    grid-template-areas: 
+    "h h h h"
+    "n m m a"
+    "n m m ad"
+    "f f f f"
+    ;
+}
+@media screen and (max-width:576px) {
+    body{grid-template-areas: 
+    "h h h h"
+    "n n n n"
+    "m m m m"
+    "a a a a"
+    "ad ad ad ad"
+    "f f  f f"
+    ;}
+    
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+        body{
+            grid-template-areas: 
+            "h h h "
+            "n n n"
+            "a m m "
+            "ad f f";
+        }
+}
